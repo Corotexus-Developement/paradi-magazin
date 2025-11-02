@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradi Magazin - Minecraft Server Magazin</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Turn.js für die Blätterfunktion -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
+</head>
+<body>
+    <header class="minecraft-style">
+        <h1>Paradi Magazin</h1>
+        <nav>
+            <ul>
+                <button class="minecraft-button" onclick="location.href='#latest'">Neueste Ausgabe</button>
+                <button class="minecraft-button" onclick="location.href='#archive'">Archiv</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="latest" class="magazine-viewer">
+            <h2>Aktuelle Ausgabe</h2>
+            <div id="magazine-container">
+                <div id="magazine">
+                    <!-- Magazine-Seiten werden hier dynamisch eingefügt -->
+                </div>
+            </div>
+            <div class="controls">
+                <button class="minecraft-button" onclick="previousPage()">Zurück</button>
+                <button class="minecraft-button" onclick="nextPage()">Weiter</button>
+            </div>
+        </section>
+
+        <section id="archive" class="magazine-grid">
+            <h2>Magazin-Archiv</h2>
+            <div class="magazine-list">
+                <!-- Magazin-Vorschaukarten werden hier dynamisch eingefügt -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="minecraft-style">
+        <p>&copy; 2025 Paradi Magazin - Ein Minecraft Server Magazin</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

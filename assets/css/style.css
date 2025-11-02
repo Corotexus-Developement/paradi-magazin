@@ -1,0 +1,147 @@
+/* Minecraft Schriftart einbinden */
+@font-face {
+    font-family: 'Minecraft';
+    src: url('https://fonts.cdnfonts.com/css/minecraft-4') format('woff2');
+}
+
+/* Grundlegende Stile */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Minecraft', sans-serif;
+    background-color: #1D1D1D;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Minecraft-Style Elemente */
+.minecraft-style {
+    background-color: #2B2B2B;
+    border: 2px solid #373737;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+}
+
+.minecraft-button {
+    background-color: #4C4C4C;
+    border: 2px solid #373737;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: 'Minecraft', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.minecraft-button:hover {
+    background-color: #5C5C5C;
+    transform: translateY(-2px);
+}
+
+/* Header Styles */
+header {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #55FF55;
+    text-shadow: 2px 2px #1D1D1D;
+    margin-bottom: 20px;
+}
+
+/* Magazine Viewer Styles */
+.magazine-viewer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#magazine-container {
+    background-color: #2B2B2B;
+    padding: 20px;
+    margin: 20px 0;
+    min-height: 600px;
+}
+
+#magazine {
+    width: 100%;
+    height: 100%;
+}
+
+/* Magazine Grid Styles */
+.magazine-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.magazine-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.magazine-card {
+    background-color: #2B2B2B;
+    border: 2px solid #373737;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.magazine-card:hover {
+    transform: translateY(-5px);
+}
+
+.magazine-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .magazine-viewer {
+        padding: 10px;
+    }
+
+    #magazine-container {
+        min-height: 400px;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.loading::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid #55FF55;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
